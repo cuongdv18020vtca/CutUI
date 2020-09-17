@@ -1,7 +1,12 @@
 import React from 'react';
-
+import { useDispatch } from 'react-redux'
+import { getStarted } from '../../actions/actionSection3';
+import { GET_STARTED } from '../../actionTypes/section3';
 const FormSec3 = () => {
-
+    const dispatch = useDispatch();
+    const handleSubmit = () => {
+        dispatch(getStarted())
+    }
     return (
         <React.Fragment>
             <div className="form" style={{ height: "385px", width: "330px", transform: "translate(27px)" }}>
@@ -32,7 +37,7 @@ const FormSec3 = () => {
                                 </div>
                             </div>
                             <div className="fiel_container">
-                                <button  >GET STARTED</button>
+                                <button onClick={() => { handleSubmit() }} >GET STARTED</button>
                             </div>
                         </form>
                     </div>

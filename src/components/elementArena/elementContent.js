@@ -1,6 +1,15 @@
 import React from 'react';
-
-const ElementContent = ({ handleClick }) => {
+import { buy_template, watchVideo } from '../../actions/elementAction';
+import { useDispatch } from 'react-redux'
+import './elementArena.css'
+const ElementContent = () => {
+    const dispatch = useDispatch()
+    const handleClick = () => {
+        dispatch(watchVideo())
+    }
+    const handleBuyTemplate = () => {
+        dispatch(buy_template())
+    }
     return (
         <>
             <div id="ElementArea">
@@ -14,13 +23,13 @@ const ElementContent = ({ handleClick }) => {
                     <h2 id="elm_3_headline">Multi-Purpose Landing Page Template</h2>
                 </div>
                 <div className=" draggable button" id="elm_5">
-                    <button className="button_watch" onClick={handleClick}><a href="">
+                    <button className="button_watch" onClick={() => { handleClick() }}><a href="">
                         WATCH VIDEO
             </a></button>
 
                 </div>
                 <div className=" draggable button" id="elm_6">
-                    <button className="button_buy" onClick={handleClick} ><a href="">
+                    <button className="button_buy" onClick={() => handleBuyTemplate()} ><a href="">
                         BUY TEMPLATE
             </a></button>
 

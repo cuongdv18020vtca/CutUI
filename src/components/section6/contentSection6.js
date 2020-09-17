@@ -1,7 +1,15 @@
 import React from 'react'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { getForFree } from '../../actions/actionSection6'
 
-const ContentSection6 = ({ value }) => {
+import './section6.css'
+const ContentSection6 = () => {
+    const dispatch = useDispatch()
+    const handleClick = () => {
+        dispatch(getForFree())
+    }
+    const value = useSelector(state => state.section6)
     const element = (value.map((val, index) => {
         return (
             <React.Fragment>
@@ -18,7 +26,7 @@ const ContentSection6 = ({ value }) => {
                         <p>{val.content}</p>
                         <p>{val.content}</p>
                     </div>
-                    <button className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
+                    <button onClick={() => handleClick()} className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
                 </div>
             </React.Fragment>
         )

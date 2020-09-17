@@ -1,6 +1,14 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { buyTemplate } from '../../actions/actionSection5';
 
-const ContentSection5 = ({ value }) => {
+import './section5.css'
+const ContentSection5 = () => {
+    const value = useSelector(state => state.section5)
+    const dispatch = useDispatch();
+    const handleBuy = () => {
+        dispatch(buyTemplate())
+    }
     return (
         <>
             <div class="section" id="SECTION5">
@@ -13,7 +21,7 @@ const ContentSection5 = ({ value }) => {
                                 <div className="content-section5">{value.content}</div>
                             </div>
                             <div className="content-section5"></div>
-                            <button className="button-section5">BUY TEMPLATE</button>
+                            <button onClick={() => handleBuy()} className="button-section5">BUY TEMPLATE</button>
                         </div>
                     </div>
                 </div>

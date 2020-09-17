@@ -1,6 +1,5 @@
 import React from 'react'
-
-
+import './section8.css'
 const ContentSection8 = ({ value }) => {
     return (
         <>

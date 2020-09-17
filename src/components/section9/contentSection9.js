@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './section9.css'
 
 const ContentSection9 = () => {
     return (

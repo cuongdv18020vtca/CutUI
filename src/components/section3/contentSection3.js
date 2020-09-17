@@ -1,8 +1,11 @@
 import React from 'react';
 import FormSec3 from './formSec3';
-
-const ContentSection3 = ({ value }) => {
-    const element = (value.map((val, index) => {
+import { useSelector, useDispatch } from 'react-redux';
+import './section3.css'
+const ContentSection3 = () => {
+    const value = useSelector(state => state.section3);
+    const dispatch = useDispatch()
+    const element = value.map((val, index) => {
         return (
             <div className="icon" style={{ display: "flex", justifyContent: "flex-start", alignItems: "flex-start" }}>
                 <div className="icon1" style={{ marginRight: "15px", paddingTop: "14px" }}>
@@ -16,7 +19,7 @@ const ContentSection3 = ({ value }) => {
 
             </div>
         )
-    }))
+    })
     return (
         <>
             <div className="section" id='SECTION3'>

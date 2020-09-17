@@ -1,7 +1,9 @@
 import React from 'react';
 import './section2.css'
-const ContentSection2 = ({ value }) => {
-    console.log(value);
+import { useSelector, useDispatch } from 'react-redux'
+const ContentSection2 = () => {
+
+    const value = useSelector(state => state.section2)
     const element = (value.map((val, index) => {
         return (
             <div class="col-4">
