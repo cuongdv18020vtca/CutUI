@@ -2,7 +2,7 @@ import React from 'react';
 
 const ElementContent = ({ handleClick }) => {
     return (
-        <React.Fragment>
+        <>
             <div id="ElementArea">
                 <div className="draggable Image" id="elm_4">
                     <img id="elm_4_image" src="https://1503641826.rsc.cdn77.org/Media/xsdnwcngpiyjfuxgtbyiyuysu_usermedia.png" alt="1" />
@@ -29,7 +29,7 @@ const ElementContent = ({ handleClick }) => {
 
 
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ElementContent

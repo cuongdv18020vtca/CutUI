@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const ContentSection6 = ({ value }) => {
-    const element = value.length ? (value.map((val, index) => {
+    const element = (value.map((val, index) => {
         return (
             <React.Fragment>
                 <div className="wrap-detail-section6">
@@ -22,9 +22,9 @@ const ContentSection6 = ({ value }) => {
                 </div>
             </React.Fragment>
         )
-    })) : null
+    }))
     return (
-        <React.Fragment>
+        <>
             <div class="section" id="SECTION6">
                 <div id="elm_50">
                     <h2 id="elm_50_headline">CHECK OUT OUR PLANS</h2>
@@ -42,7 +42,7 @@ const ContentSection6 = ({ value }) => {
 
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection6

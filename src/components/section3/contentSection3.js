@@ -2,7 +2,7 @@ import React from 'react';
 import FormSec3 from './formSec3';
 
 const ContentSection3 = ({ value }) => {
-    const element = value.length ? (value.map((val, index) => {
+    const element = (value.map((val, index) => {
         return (
             <div className="icon" style={{ display: "flex", justifyContent: "flex-start", alignItems: "flex-start" }}>
                 <div className="icon1" style={{ marginRight: "15px", paddingTop: "14px" }}>
@@ -16,9 +16,9 @@ const ContentSection3 = ({ value }) => {
 
             </div>
         )
-    })) : null
+    }))
     return (
-        <React.Fragment>
+        <>
             <div className="section" id='SECTION3'>
                 <div className="container">
                     <div className="content">
@@ -33,7 +33,7 @@ const ContentSection3 = ({ value }) => {
                     <FormSec3 />
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection3;

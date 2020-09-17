@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ContentSection5 from "./contentSection5";
-
+import './section5.css'
 const Section5 = () => {
     const [contentSection5, setcontentSec5] = useState({
         title: "Watch the video and explore our features",

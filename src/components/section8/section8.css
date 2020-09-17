@@ -1,0 +1,19 @@
+#SECTION8 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background: #ffffff;
+  position: relative;
+  top: 276px;
+}
+.wrap-content-section8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 960px;
+}
+.wrap-content-section8 img {
+  width: 135px;
+  height: 24px;
+}

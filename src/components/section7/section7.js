@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ContentSection7 from './contentSection7'
-
+import './section7.css'
 const Section7 = () => {
     const [contentSection7, setContentSec7] = useState([
         {

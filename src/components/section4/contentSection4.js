@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContentSection4 = ({ value }) => {
     console.log(value);
-    const element = value.length ? (value.map((val, index) => {
+    const element = (value.map((val, index) => {
         return (
             <div className="wrap-detail-section4">
                 <img id="elm_30_imgage" src={val.icon} alt="" />
@@ -13,9 +13,9 @@ const ContentSection4 = ({ value }) => {
                 </div>
             </div>
         )
-    })) : null
+    }))
     return (
-        <React.Fragment>
+        <>
             <div className="section" id="SECTION4">
                 <div id="elm_33">
                     <h2 id="elm_33_headline">AWESOME FEATURES</h2>
@@ -32,7 +32,7 @@ const ContentSection4 = ({ value }) => {
 
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection4;

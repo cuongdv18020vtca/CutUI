@@ -2,9 +2,9 @@ import React from 'react'
 
 
 const ContentSection7 = ({ value }) => {
-    const element = value.length ? (value.map((val, index) => {
+    const element = (value.map((val, index) => {
         return (
-            <React.Fragment>
+            <>
                 <div className="wrap-detail-section7">
                     <div className="user-image">
                         <img src={val.img} alt="" />
@@ -20,11 +20,11 @@ const ContentSection7 = ({ value }) => {
                     </div>
 
                 </div>
-            </React.Fragment>
+            </>
         )
-    })) : null
+    }))
     return (
-        <React.Fragment>
+        <>
             <div class="section" id="SECTION7">
                 <div id="elm_50">
                     <h2 id="elm_50_headline">READ OUR TESTIMONIALS</h2>
@@ -45,7 +45,7 @@ const ContentSection7 = ({ value }) => {
 
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection7

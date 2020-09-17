@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './section2.css'
 const ContentSection2 = ({ value }) => {
     console.log(value);
-    const element = value.length ? (value.map((val, index) => {
+    const element = (value.map((val, index) => {
         return (
             <div class="col-4">
                 <img id="elm_14_image" src={val.icon} alt="1" />
@@ -26,9 +26,9 @@ const ContentSection2 = ({ value }) => {
                 </div>
             </div>
         )
-    })) : null
+    }))
     return (
-        <React.Fragment>
+        <>
             <div class="section" id="SECTION2">
                 <div class="draggable Image" id="elm_122">
                     <a target="_self" id="ff4e8fb6-e3a6-4928-834b-cb3bfc084d40" className data-rel="_self">
@@ -42,7 +42,7 @@ const ContentSection2 = ({ value }) => {
                 </div>
 
             </div>
-        </React.Fragment >
+        </>
     )
 }
 export default ContentSection2;

@@ -1,0 +1,35 @@
+#SECTION2 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  top: 412px;
+  background-color: rgb(233, 234, 236);
+}
+#elm_122 {
+  position: relative;
+  z-index: 124;
+  height: 45px;
+  width: 45px;
+  background-color: transparent;
+  top: -21px;
+  left: 49.7%;
+}
+#elm_11 {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 125;
+  display: flex;
+  justify-content: center;
+}
+.p1 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.col-4 {
+  padding-left: 35px;
+  text-align: center;
+  width: 33.333%;
+}

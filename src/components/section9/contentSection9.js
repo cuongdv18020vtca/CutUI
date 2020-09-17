@@ -3,7 +3,7 @@ import React from 'react'
 
 const ContentSection9 = () => {
     return (
-        <React.Fragment>
+        <>
             <div className="section" id="SECTION9">
                 <div id="elm_37">
                     <h2 id="elm_37_headline">INTERESTED?</h2>
@@ -29,7 +29,7 @@ const ContentSection9 = () => {
 
             </div>
             <div className="footer">Created by Pagewiz - The Landing Page Platform</div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection9;

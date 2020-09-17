@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContentSection5 = ({ value }) => {
     return (
-        <React.Fragment>
+        <>
             <div class="section" id="SECTION5">
                 <div className="wrap-content-section5">
                     <div className="wrap-detail-section5">
@@ -18,7 +18,7 @@ const ContentSection5 = ({ value }) => {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default ContentSection5;

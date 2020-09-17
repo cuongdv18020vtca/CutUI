@@ -1,0 +1,80 @@
+#SECTION3 {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-color: #f0efeb;
+  top: 355px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+#elm_18_headline {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  text-align: left;
+  font-size: 50px;
+  color: #6a585b;
+}
+.content {
+  padding-left: 16px;
+}
+#elm_19_headline {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  text-align: left;
+  font-size: 30px;
+  color: #aba1a3;
+}
+.icon1 {
+  width: 25px;
+  height: 25px;
+}
+.form {
+  background-color: white;
+}
+.form1 {
+  width: 330px;
+  height: 385px;
+}
+.fiel_container {
+  margin-bottom: 15px;
+}
+.input input {
+  width: 290px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #e8e5e1;
+  border-radius: 5px;
+  padding: 1px 2px;
+}
+
+.fiel_container .input {
+  padding-top: 10px;
+}
+.fiel_container button {
+  background-color: #f26347;
+  width: 290px;
+  height: 50px;
+  border: 2px solid #f26347;
+  background-position: center center;
+  font-size: 18px;
+  border-radius: 4px;
+  color: white;
+  transition: 0.5s;
+  transition-property: background;
+}
+.fiel_container button:hover {
+  background: black;
+  border: none;
+}
