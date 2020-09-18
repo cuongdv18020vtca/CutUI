@@ -1,4 +1,4 @@
-import { call, put, takeLates } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { fetchData } from '../api/api'
 import { getVideo, getVideoSuccess } from '../features/video/videoSlice'
 
@@ -11,5 +11,5 @@ function* getApi() {
     }
 }
 export default function* watchVideo() {
-    yield put(watchVideo.prototype, getApi)
+    yield takeLatest(getVideo.type, getApi)
 }

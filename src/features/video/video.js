@@ -12,7 +12,7 @@ const Video = () => {
     }
     useEffect(() => {
         dispatch(getVideo())
-    })
+    }, [])
     return (
         <>
             <div class="section" id="SECTION5">

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { getForFree } from '../../actions/packgaeAction/index'
-import { getData } from './packageSlice'
+import { getpackages } from './packageSlice'
 import './package.css'
 const Package = () => {
     const dispatch = useDispatch()
@@ -10,7 +10,7 @@ const Package = () => {
         dispatch(getForFree())
     }
     useEffect(() => {
-        dispatch(getData())
+        dispatch(getpackages())
     }, [])
     const packages = useSelector(state => state.packages.listPackage)
     const element = (packages.map((val, index) => {

@@ -18,7 +18,6 @@ const reducer = combineReducers({
     video,
     packages,
     customer
-
 })
 
 const store = configureStore({
