@@ -1,0 +1,105 @@
+{
+  "listCharacteristic": [
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/noiodkfycayfurjcxphglccbt_usermedia.png",
+      "title": "Maecenas currabitur",
+      "content": "Aliquam justo neque, fermentum vel posuere vulputate vitae mi. Vestibulum magna tempor nisl vehicula luctus urna. Aenean augue ligula, molestie id est in, bibendum dignissim. Cras tellus nisl, laoreet at nisi venenatis."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/nsadlozrozqsyxszidxkkdojp_usermedia.png",
+      "title": "Semper finibus",
+      "content": "Praesent et purus ac libero euismod egestas. Aliquam feugiat luctus eros eget maecenas semper pulvinar. tiam in auctor tortor. Aliquam vulputate risus placerat congue ornare. Donec semper odio non efficitur congue."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/djxbykmgupsfvqmzogsskzsoh_usermedia.png",
+      "title": "Aliquam metus luctus",
+      "content": " Suspendisse lobortis vestibulum leo, ac volutpat rutrum tristique. Maecenas posuere ultrices ante et dolores nescum finibus. Nulla eros auctor sollicitudin, a rutrum quam mollis. Nulla at lectus lorem ipsum."
+    }
+  ],
+  "listSubscription": [
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/lumjnqfwsisugrdyqrnsuqian_usermedia.png",
+      "content": "Donec scelerisque finibus dui, in pretium ligula pharetra ut. Phasellus mattis lacus vel sagittis consequat. Nulla vitae libero placerat, molestie sapien sed, blandit nibh. Maecenas non vehicula purus."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/lumjnqfwsisugrdyqrnsuqian_usermedia.png",
+      "content": "Donec scelerisque finibus dui, in pretium ligula pharetra ut. Phasellus mattis lacus vel sagittis consequat. Nulla vitae libero placerat, molestie sapien sed, blandit nibh. Maecenas non vehicula purus."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/lumjnqfwsisugrdyqrnsuqian_usermedia.png",
+      "content": "Donec scelerisque finibus dui, in pretium ligula pharetra ut. Phasellus mattis lacus vel sagittis consequat. Nulla vitae libero placerat, molestie sapien sed, blandit nibh. Maecenas non vehicula purus."
+    }
+  ],
+  "listFeature": [
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/ojnosyxkhwnghpxtnynnoazvm_usermedia.png",
+      "title": "Desktop & Mobile",
+      "content": "Suspendisse vel lacinia orci, ut commodo enim. Vestibulum at ultrices sapien."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/gsvnznksckjwumbbulpqcgzer_usermedia.png",
+      "title": "ProGlyphs Set",
+      "content": "Nulla ultrices eros auctor enim sollicitudin, a rutrum quam mollis. Nulla at odio lectus."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/dbeeuznkrocqxwlwyfpzypmsp_usermedia.png",
+      "title": "Easy to Use",
+      "content": "Donec semper odio non efficitur congue. Aenean augue ligula, molestie id est in."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/xxmzvasqwvlfnhkwmdxzkwodu_usermedia.png",
+      "title": "Drag & Drop",
+      "content": "Proin cursus arcu mauris, et pulvinar lectus fermentum sed. Donec imperdiet est."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/dajesoolpwbalvojzbbaqlxec_usermedia.png",
+      "title": "Statistics",
+      "content": "Phasellus varius blandit felis nec porttitor. Donec sit amet ante sit amet sapien."
+    },
+    {
+      "icon": "https://1503641826.rsc.cdn77.org/Media/mmpteajifsaimdgxuxljwaijp_usermedia.png",
+      "title": "Save Money",
+      "content": "Curabitur at sagittis. Vestibulum ante ipsum primis in faucibus luctus ultrices posuere cubilia."
+    }
+  ],
+  "listCustomer": [
+    {
+      "img": "https://1503641826.rsc.cdn77.org/Media/ekcpwfoeygsvehpfempkcbvyz_usermedia.png",
+      "name": "Joey Higgins",
+      "department": " CEO Higgins&Geox ",
+      "content": "Praesent et purus ac libero euismod egestas. Aliquam feugiat luctus eros eget maecenas semper pulvinar. tiam in auctor tortor. Aliquam vulputate risus placerat congue ornare. Donec semper odio non efficitur congue."
+    },
+    {
+      "img": "https://1503641826.rsc.cdn77.org/Media/tqqkfyxwtevculhlwopeiswos_usermedia.png",
+      "name": "Joey Higgins",
+      "department": "CEO Higgins&Geox ",
+      "content": "Praesent et purus ac libero euismod egestas. Aliquam feugiat luctus eros eget maecenas semper pulvinar. tiam in auctor tortor. Aliquam vulputate risus placerat congue ornare. Donec semper odio non efficitur congue."
+    },
+    {
+      "img": "https://1503641826.rsc.cdn77.org/Media/clrsditnfmpakuydorbaptatt_usermedia.png",
+      "name": "Joey Higgins",
+      "department": "CEO Higgins&Geox ",
+      "content": "Praesent et purus ac libero euismod egestas. Aliquam feugiat luctus eros eget maecenas semper pulvinar. tiam in auctor tortor. Aliquam vulputate risus placerat congue ornare. Donec semper odio non efficitur congue."
+    }
+  ],
+  "listPackage": [
+    {
+      "price": "0",
+      "type": "BASIC",
+      "content": "Lorem ipsum dolor sit",
+      "check": true
+    },
+    {
+      "price": "49",
+      "type": "STANDARD",
+      "content": "Lorem ipsum dolor sit",
+      "check": false
+    },
+    {
+      "price": "149",
+      "type": "ENTERPRISE",
+      "content": "Lorem ipsum dolor sit",
+      "check": true
+    }
+  ]
+}

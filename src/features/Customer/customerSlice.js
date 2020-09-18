@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-const initialState = [
+const listCustomer = [
     {
         img: "https://1503641826.rsc.cdn77.org/Media/ekcpwfoeygsvehpfempkcbvyz_usermedia.png",
         name: "Joey Higgins",
@@ -22,9 +22,13 @@ const initialState = [
 ]
 const customerSlice = createSlice({
     name: 'customer',
-    initialState: initialState,
-    reducers: {},
+    initialState: {
+        listCustomer: []
+    },
+    reducers: {
+        getData: (state, action) => ({ ...state, listCustomer })
+    },
 });
 const { actions, reducer } = customerSlice;
-export const { increment, decrement } = actions;
+export const { getData } = actions;
 export default reducer;

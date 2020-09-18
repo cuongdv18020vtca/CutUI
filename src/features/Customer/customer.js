@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './customer.css'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { getData } from './customerSlice'
 const Customer = () => {
-    const customer = useSelector(state => state.customer)
+    const dispatch = useDispatch();
+    const customer = useSelector(state => state.customer.listCustomer)
+    useEffect(() => {
+        dispatch(getData())
+    }, [])
     const element = (customer.map((val, index) => {
         return (
             <>

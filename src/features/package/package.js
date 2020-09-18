@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { getForFree } from '../../actions/packgaeAction/index'
-
+import { getData } from './packageSlice'
 import './package.css'
 const Package = () => {
     const dispatch = useDispatch()
     const handleClick = () => {
         dispatch(getForFree())
     }
-    const packgages = useSelector(state => state.packgages)
-    const element = (packgages.map((val, index) => {
+    useEffect(() => {
+        dispatch(getData())
+    }, [])
+    const packages = useSelector(state => state.packages.listPackage)
+    const element = (packages.map((val, index) => {
         return (
             <React.Fragment>
                 <div className="wrap-detail-section6">

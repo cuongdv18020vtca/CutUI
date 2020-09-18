@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { buyTemplate } from '../../actions/videoAction';
 
 import './video.css'
+import { getVideo } from './videoSlice';
 const Video = () => {
-    const video = useSelector(state => state.video)
+    const video = useSelector(state => state.video.listVideo)
     const dispatch = useDispatch();
     const handleBuy = () => {
         dispatch(buyTemplate())
     }
+    useEffect(() => {
+        dispatch(getVideo())
+    })
     return (
         <>
             <div class="section" id="SECTION5">

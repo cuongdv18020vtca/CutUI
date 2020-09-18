@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-const initialState = [
+const listPackage = [
     {
         price: "0",
         type: "BASIC",
@@ -21,9 +21,13 @@ const initialState = [
 ]
 const packageSlice = createSlice({
     name: 'packages',
-    initialState: initialState,
-    reducers: {},
+    initialState: {
+        listPackage: []
+    },
+    reducers: {
+        getData: (state, action) => ({ ...state, listPackage })
+    },
 });
 const { actions, reducer } = packageSlice;
-export const { increment, decrement } = actions;
+export const { getData } = actions;
 export default reducer;

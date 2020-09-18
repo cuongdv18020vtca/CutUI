@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './characteristic.css'
 import { useSelector, useDispatch } from 'react-redux'
+import { getCharacteristic } from './characteristicSlice'
 const Characteristic = () => {
-    const characteristic = useSelector(state => state.characteristic)
-    console.log(characteristic);
+    const dispatch = useDispatch()
+    const characteristic = useSelector(state => state.characteristic.listCharacteristic)
+    useEffect(() => {
+        dispatch(getCharacteristic())
+    }, [])
     const element = (characteristic.map((val, index) => {
         return (
             <div class="col-4">

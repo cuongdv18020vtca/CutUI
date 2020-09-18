@@ -1,10 +1,13 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import './feature.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { getFeature } from './featureSlice';
 const Feature = () => {
-    const feature = useSelector(state => state.feature)
-
+    const feature = useSelector(state => state.feature.listFeature)
+    const distpatch = useDispatch()
+    useEffect(() => {
+        distpatch(getFeature())
+    }, [])
     const element = (feature.map((val, index) => {
         return (
             <div className="wrap-detail-section4">

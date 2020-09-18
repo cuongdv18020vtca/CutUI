@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FormSec3 from './formSec3';
 import { useSelector, useDispatch } from 'react-redux';
-import './subscription.css'
+import './subscription.css';
+import { getSubscription } from './subscriptionSlice'
 const Subscription = () => {
-    const value = useSelector(state => state.subscription);
+    const value = useSelector(state => state.subscription.listSubscription);
     const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getSubscription())
+    }, [])
     const element = value.map((val, index) => {
         return (
             <div className="icon" style={{ display: "flex", justifyContent: "flex-start", alignItems: "flex-start" }}>
