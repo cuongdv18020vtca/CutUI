@@ -8,27 +8,6 @@ const Customer = () => {
     useEffect(() => {
         dispatch(getCustomer())
     }, [])
-    const element = (customer.map((val, index) => {
-        return (
-            <>
-                <div className="wrap-detail-section7">
-                    <div className="user-image">
-                        <img src={val.img} alt="" />
-                    </div>
-
-                    <div className="content7">
-                        <div className="title-section7" >{val.name}</div>
-                        <div className="department"> {val.department}</div>
-                        <div className="border7 "></div>
-                        <div className="text-content7">
-                            <div>{val.content}</div>
-                        </div>
-                    </div>
-
-                </div>
-            </>
-        )
-    }))
     return (
         <>
             <div class="section" id="SECTION7">
@@ -45,7 +24,27 @@ const Customer = () => {
 
                     <div className="wrap__content_section6">
 
-                        {element}
+                        {(customer.map((val, index) => {
+                            return (
+                                <>
+                                    <div className="wrap-detail-section7">
+                                        <div className="user-image">
+                                            <img src={val.img} alt="" />
+                                        </div>
+
+                                        <div className="content7">
+                                            <div className="title-section7" >{val.name}</div>
+                                            <div className="department"> {val.department}</div>
+                                            <div className="border7 "></div>
+                                            <div className="text-content7">
+                                                <div>{val.content}</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </>
+                            )
+                        }))}
                     </div>
 
 

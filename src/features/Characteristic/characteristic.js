@@ -8,31 +8,7 @@ const Characteristic = () => {
     useEffect(() => {
         dispatch(getCharacteristic())
     }, [])
-    const element = (characteristic.map((val, index) => {
-        return (
-            <div class="col-4">
-                <img id="elm_14_image" src={val.icon} alt="1" />
-                <div class="title">
-                    <h4>
-                        <span style={{ lineHeight: "25px" }}>
-                            <span style={{ color: "#393d3e" }}>
-                                <span style={{ fontSsize: "24px" }}>{val.title}</span>
-                            </span>
-                        </span>
-                    </h4>
-                </div>
-                <div class="text">
-                    <p style={{ textAlign: "center" }}>
-                        <span style={{ fontSize: "14px" }}>
-                            <span style={{ lineHeight: "25px" }}>
-                                <span style={{ color: "#8e8386" }}>{val.content}</span>
-                            </span>
-                        </span>
-                    </p>
-                </div>
-            </div>
-        )
-    }))
+
     return (
         <>
             <div class="section" id="SECTION2">
@@ -43,7 +19,31 @@ const Characteristic = () => {
                 </div>
                 <div class=" draggable Image" id="elm_11">
                     <div class="p1">
-                        {element}
+                        {(characteristic.map((val, index) => {
+                            return (
+                                <div class="col-4">
+                                    <img id="elm_14_image" src={val.icon} alt="1" />
+                                    <div class="title">
+                                        <h4>
+                                            <span style={{ lineHeight: "25px" }}>
+                                                <span style={{ color: "#393d3e" }}>
+                                                    <span style={{ fontSsize: "24px" }}>{val.title}</span>
+                                                </span>
+                                            </span>
+                                        </h4>
+                                    </div>
+                                    <div class="text">
+                                        <p style={{ textAlign: "center" }}>
+                                            <span style={{ fontSize: "14px" }}>
+                                                <span style={{ lineHeight: "25px" }}>
+                                                    <span style={{ color: "#8e8386" }}>{val.content}</span>
+                                                </span>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            )
+                        }))}
                     </div>
                 </div>
 

@@ -8,17 +8,6 @@ const Feature = () => {
     useEffect(() => {
         distpatch(getFeature())
     }, [])
-    const element = (feature.map((val, index) => {
-        return (
-            <div className="wrap-detail-section4">
-                <img id="elm_30_imgage" src={val.icon} alt="" />
-                <div className="text-section4">
-                    <h4 className="text-style">{val.title}</h4>
-                    <p>{val.content}</p>
-                </div>
-            </div>
-        )
-    }))
     return (
         <>
             <div className="section" id="SECTION4">
@@ -32,7 +21,17 @@ const Feature = () => {
                 </div>
                 <div className="content_section4">
                     <div className="wrap__content_section4">
-                        {element}
+                        {(feature.map((val, index) => {
+                            return (
+                                <div className="wrap-detail-section4">
+                                    <img id="elm_30_imgage" src={val.icon} alt="" />
+                                    <div className="text-section4">
+                                        <h4 className="text-style">{val.title}</h4>
+                                        <p>{val.content}</p>
+                                    </div>
+                                </div>
+                            )
+                        }))}
                     </div>
 
                 </div>

@@ -11,27 +11,6 @@ const Package = () => {
         dispatch(getpackages())
     }, [])
     const packages = useSelector(state => state.packages.listPackage)
-    const element = (packages.map((val, index) => {
-        return (
-            <React.Fragment>
-                <div className="wrap-detail-section6">
-                    <div className="icon-section6" id={val.check ? "" : "standard"}>
-                        <div className="icon-price " id={val.check ? "" : "icon-2"}>$</div>
-                        <p className="content-icon" id={val.check ? "" : "content-2"}>{val.price}</p>
-                    </div>
-
-                    <div className="title-section6">{val.type}</div>
-                    <div className="border6"></div>
-                    <div className="text-content6">
-                        <p>{val.content}</p>
-                        <p>{val.content}</p>
-                        <p>{val.content}</p>
-                    </div>
-                    <button className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
-                </div>
-            </React.Fragment>
-        )
-    }))
     return (
         <>
             <div class="section" id="SECTION6">
@@ -45,7 +24,27 @@ const Package = () => {
                 </div>
                 <div className="content_section6">
                     <div className="wrap__content_section6">
-                        {element}
+                        {(packages.map((val, index) => {
+                            return (
+                                <React.Fragment>
+                                    <div className="wrap-detail-section6">
+                                        <div className="icon-section6" id={val.check ? "" : "standard"}>
+                                            <div className="icon-price " id={val.check ? "" : "icon-2"}>$</div>
+                                            <p className="content-icon" id={val.check ? "" : "content-2"}>{val.price}</p>
+                                        </div>
+
+                                        <div className="title-section6">{val.type}</div>
+                                        <div className="border6"></div>
+                                        <div className="text-content6">
+                                            <p>{val.content}</p>
+                                            <p>{val.content}</p>
+                                            <p>{val.content}</p>
+                                        </div>
+                                        <button className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
+                                    </div>
+                                </React.Fragment>
+                            )
+                        }))}
                     </div>
 
 
