@@ -16,7 +16,7 @@ const FormSec3 = () => {
         name: Yup.string().required('Required'),
         email: Yup.string().email("Invalid email").required("Required"),
 
-        phone: Yup.string().required("Required")
+        phone: Yup.string().min(10, 'Too short').max(12, 'Too long').required("Required")
     })
     return (
         <React.Fragment>
