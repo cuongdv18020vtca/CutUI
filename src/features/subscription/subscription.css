@@ -78,3 +78,6 @@
   background: black;
   border: none;
 }
+.error {
+  color: red;
+}

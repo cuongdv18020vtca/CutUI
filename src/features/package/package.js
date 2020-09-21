@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { getForFree } from '../../actions/packgaeAction/index'
+
 import { getpackages } from './packageSlice'
 import './package.css'
 const Package = () => {
     const dispatch = useDispatch()
-    const handleClick = () => {
-        dispatch(getForFree())
-    }
+
     useEffect(() => {
         dispatch(getpackages())
     }, [])
@@ -29,7 +27,7 @@ const Package = () => {
                         <p>{val.content}</p>
                         <p>{val.content}</p>
                     </div>
-                    <button onClick={() => handleClick()} className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
+                    <button className={val.check ? "button-section6" : "button-section7"}>GET FOR FREE</button>
                 </div>
             </React.Fragment>
         )

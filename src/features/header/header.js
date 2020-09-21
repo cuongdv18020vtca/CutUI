@@ -1,15 +1,10 @@
 import React from 'react';
-import { buy_template, watchVideo } from '../../actions/headerAction';
+
 import { useDispatch } from 'react-redux'
 import './header.css'
 const Header = () => {
     const dispatch = useDispatch()
-    const handleClick = () => {
-        dispatch(watchVideo())
-    }
-    const handleBuyTemplate = () => {
-        dispatch(buy_template())
-    }
+
     return (
         <>
             <div id="ElementArea">
@@ -23,13 +18,13 @@ const Header = () => {
                     <h2 id="elm_3_headline">Multi-Purpose Landing Page Template</h2>
                 </div>
                 <div className=" draggable button" id="elm_5">
-                    <button className="button_watch" onClick={() => { handleClick() }}><a href="">
+                    <button className="button_watch" ><a href="">
                         WATCH VIDEO
             </a></button>
 
                 </div>
                 <div className=" draggable button" id="elm_6">
-                    <button className="button_buy" onClick={() => handleBuyTemplate()} ><a href="">
+                    <button className="button_buy"  ><a href="">
                         BUY TEMPLATE
             </a></button>
 

@@ -4,6 +4,8 @@ import { getCustomer, getCustomerSuccess } from "../features/Customer/customerSl
 function* getApi() {
     try {
         const data = yield call(fetchData);
+        console.log(fetchData());
+        console.log(fetchData);
         yield put(getCustomerSuccess(data));
     } catch (error) {
         console.log(error);

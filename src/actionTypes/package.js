@@ -1,1 +1,0 @@
-export const GET_FOR_FREE = "GET_FOR_FREE";

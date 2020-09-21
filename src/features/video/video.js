@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { buyTemplate } from '../../actions/videoAction';
+
 
 import './video.css'
 import { getVideo } from './videoSlice';
 const Video = () => {
     const video = useSelector(state => state.video.listVideo)
     const dispatch = useDispatch();
-    const handleBuy = () => {
-        dispatch(buyTemplate())
-    }
+
     useEffect(() => {
         dispatch(getVideo())
     }, [])
@@ -25,7 +23,7 @@ const Video = () => {
                                 <div className="content-section5">{video.content}</div>
                             </div>
                             <div className="content-section5"></div>
-                            <button onClick={() => handleBuy()} className="button-section5">BUY TEMPLATE</button>
+                            <button className="button-section5">BUY TEMPLATE</button>
                         </div>
                     </div>
                 </div>

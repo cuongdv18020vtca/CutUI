@@ -1,1 +1,0 @@
-export const GET_STARTED = "GET_STARTED"
