@@ -1,4 +1,4 @@
-import { all } from "redux-saga/effects";
+import { all, fork } from "redux-saga/effects";
 import watchCharacteristic from './characteristicSaga'
 import watchSubscription from './subscriptionSaga';
 import watchFeature from './featureSaga'

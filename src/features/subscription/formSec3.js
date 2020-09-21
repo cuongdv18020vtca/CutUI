@@ -4,14 +4,13 @@ import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik'
 import * as Yup from 'yup'
 import TextError from './textError';
 const FormSec3 = () => {
-    const dispatch = useDispatch();
     const initialValues = {
         name: '',
         email: '',
         phone: ''
     }
-    const onSubmit = () => {
-        console.log("Form data");
+    const onSubmit = (values) => {
+        alert(`Name:${values.name}, email: ${values.email},phone: ${values.phone}`)
     }
     const validationSchema = Yup.object({
         name: Yup.string().required('Required'),
@@ -29,14 +28,14 @@ const FormSec3 = () => {
                     <Formik className="form1"
                         initialValues={initialValues}
                         validationSchema={validationSchema}
-                        onSubmit={onsubmit}
+                        onSubmit={onSubmit}
                     >
 
                         {
                             props => {
                                 const { values, errors, touched } = props
                                 return (
-                                    <Form action="">
+                                    <Form>
                                         <div className="fiel_container">
                                             <label for="">Name*</label>
                                             <div className="input">
@@ -60,7 +59,7 @@ const FormSec3 = () => {
                                             </div>
                                         </div>
                                         <div className="fiel_container">
-                                            <button >GET STARTED</button>
+                                            <button type="submit" >GET STARTED</button>
                                         </div>
                                     </Form>
                                 )
