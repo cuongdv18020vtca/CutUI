@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 const featureSlice = createSlice({
-    name: 'feature',
-    initialState: {
-        listFeature: []
+  name: "feature",
+  initialState: {
+    listFeature: [],
+  },
+  reducers: {
+    getFeature: (state) => {
+      return state;
     },
-    reducers: {
-        getFeature: (state) => {
-            return state
-        },
-        getFeatureSuccess: (state, action) => {
-            return { ...state, listFeature: action.payload.listFeature }
-        }
+    getFeatureSuccess: (state, action) => {
+      return { ...state, listFeature: action.payload.listFeature };
     },
+  },
 });
 const { actions, reducer } = featureSlice;
 export const { getFeature, getFeatureSuccess } = actions;

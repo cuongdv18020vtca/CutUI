@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 const customerSlice = createSlice({
-    name: 'customer',
-    initialState: {
-        listCustomer: []
+  name: "customer",
+  initialState: {
+    listCustomer: [],
+  },
+  reducers: {
+    getCustomer: (state, action) => {
+      return state;
     },
-    reducers: {
-        getCustomer: (state, action) => {
-            return state;
-        },
-        getCustomerSuccess: (state, action) => {
-            return { ...state, listCustomer: action.payload.listCustomer }
-        }
+    getCustomerSuccess: (state, action) => {
+      return { ...state, listCustomer: action.payload.listCustomer };
     },
+  },
 });
 const { actions, reducer } = customerSlice;
 export const { getCustomer, getCustomerSuccess } = actions;

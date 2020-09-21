@@ -1,42 +1,41 @@
-import React, { useEffect } from 'react';
-import './feature.css'
-import { useSelector, useDispatch } from 'react-redux'
-import { getFeature } from './featureSlice';
+import React, { useEffect } from "react";
+import "./feature.css";
+import { useSelector, useDispatch } from "react-redux";
+import { getFeature } from "./featureSlice";
 const Feature = () => {
-    const feature = useSelector(state => state.feature.listFeature)
-    const distpatch = useDispatch()
-    useEffect(() => {
-        distpatch(getFeature())
-    }, [])
-    return (
-        <>
-            <div className="section" id="SECTION4">
-                <div id="elm_33">
-                    <h2 id="elm_33_headline">AWESOME FEATURES</h2>
+  const feature = useSelector((state) => state.feature.listFeature);
+  const distpatch = useDispatch();
+  useEffect(() => {
+    distpatch(getFeature());
+  }, []);
+  return (
+    <>
+      <div className="section" id="SECTION4">
+        <div id="elm_33">
+          <h2 id="elm_33_headline">AWESOME FEATURES</h2>
+        </div>
+        <div id="elm_34">
+          <h2 id="elm_34_headline">
+            What will you get with our template and Pagewiz
+          </h2>
+        </div>
+        <div className="content_section4">
+          <div className="wrap__content_section4">
+            {feature.map((val, index) => {
+              return (
+                <div className="wrap-detail-section4">
+                  <img id="elm_30_imgage" src={val.icon} alt="" />
+                  <div className="text-section4">
+                    <h4 className="text-style">{val.title}</h4>
+                    <p>{val.content}</p>
+                  </div>
                 </div>
-                <div id="elm_34">
-                    <h2 id="elm_34_headline">
-                        What will you get with our template and Pagewiz
-                    </h2>
-                </div>
-                <div className="content_section4">
-                    <div className="wrap__content_section4">
-                        {(feature.map((val, index) => {
-                            return (
-                                <div className="wrap-detail-section4">
-                                    <img id="elm_30_imgage" src={val.icon} alt="" />
-                                    <div className="text-section4">
-                                        <h4 className="text-style">{val.title}</h4>
-                                        <p>{val.content}</p>
-                                    </div>
-                                </div>
-                            )
-                        }))}
-                    </div>
-
-                </div>
-            </div>
-        </>
-    )
-}
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 export default Feature;
