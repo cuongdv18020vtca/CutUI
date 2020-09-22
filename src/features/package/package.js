@@ -9,11 +9,11 @@ const Package = () => {
 
   useEffect(() => {
     dispatch(getpackages());
-  }, []);
+  }, [dispatch]);
   const packages = useSelector((state) => state.packages.listPackage);
   return (
     <>
-      <div class="section" id="SECTION6">
+      <div className="section" id="SECTION6">
         <div id="elm_50">
           <h2 id="elm_50_headline">CHECK OUT OUR PLANS</h2>
         </div>
@@ -26,7 +26,7 @@ const Package = () => {
           <div className="wrap__content_section6">
             {packages.map((val, index) => {
               return (
-                <React.Fragment>
+                <React.Fragment key={index}>
                   <div className="wrap-detail-section6">
                     <div
                       className="icon-section6"

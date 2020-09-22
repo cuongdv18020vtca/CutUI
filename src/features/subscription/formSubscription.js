@@ -1,6 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import TextError from "./textError";
 const FormSubscription = () => {
@@ -40,12 +39,11 @@ const FormSubscription = () => {
             validationSchema={validationSchema}
             onSubmit={onSubmit}
           >
-            {(props) => {
-              const { values, errors, touched } = props;
+            {() => {
               return (
                 <Form>
                   <div className="fiel_container">
-                    <label for="">Name*</label>
+                    <label htmlFor="name">Name*</label>
                     <div className="input">
                       <Field
                         type="text"
@@ -56,7 +54,7 @@ const FormSubscription = () => {
                     </div>
                   </div>
                   <div className="fiel_container">
-                    <label for="">Email*</label>
+                    <label htmlFor="email">Email*</label>
                     <div className="input">
                       <Field
                         type="text"
@@ -67,7 +65,7 @@ const FormSubscription = () => {
                     </div>
                   </div>
                   <div className="fiel_container">
-                    <label for="">Phone*</label>
+                    <label htmlFor="phone">Phone*</label>
 
                     <div className="input">
                       <Field

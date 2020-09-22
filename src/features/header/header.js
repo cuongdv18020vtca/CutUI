@@ -1,10 +1,6 @@
 import React from "react";
-
-import { useDispatch } from "react-redux";
 import "./header.css";
 const Header = () => {
-  const dispatch = useDispatch();
-
   return (
     <>
       <div id="ElementArea">
@@ -16,7 +12,7 @@ const Header = () => {
           />
         </div>
         <div
-          style={{ width: "200px;" }}
+          style={{ width: 200 }}
           className="draggable section1 Headline"
           id=" elm_2"
         >
@@ -27,12 +23,12 @@ const Header = () => {
         </div>
         <div className=" draggable button" id="elm_5">
           <button className="button_watch">
-            <a href="">WATCH VIDEO</a>
+            <a href="/#">WATCH VIDEO</a>
           </button>
         </div>
         <div className=" draggable button" id="elm_6">
           <button className="button_buy">
-            <a href="">BUY TEMPLATE</a>
+            <a href="/#">BUY TEMPLATE</a>
           </button>
         </div>
       </div>

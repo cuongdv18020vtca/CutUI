@@ -2,7 +2,7 @@ import characteristic from "../features/Characteristic/characteristicSlice";
 
 import createSagaMiddleware from "redux-saga";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { combineReducers, applyMiddleware } from "redux";
+import { combineReducers } from "redux";
 import subscription from "../features/subscription/subscriptionSlice";
 import feature from "../features/Feature/featureSlice";
 import video from "../features/video/videoSlice";

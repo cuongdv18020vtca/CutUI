@@ -1,4 +1,4 @@
-import { all, fork } from "redux-saga/effects";
+import { all } from "redux-saga/effects";
 import watchCharacteristic from "./characteristicSaga";
 import watchSubscription from "./subscriptionSaga";
 import watchFeature from "./featureSaga";
@@ -9,7 +9,6 @@ export default function* () {
   yield all([
     watchCharacteristic(),
     watchSubscription(),
-    ,
     watchFeature(),
     watchVideo(),
     watchPackages(),

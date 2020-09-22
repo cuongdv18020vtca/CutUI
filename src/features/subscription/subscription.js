@@ -8,7 +8,7 @@ const Subscription = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSubscription());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <div className="section" id="SECTION3">
@@ -23,6 +23,7 @@ const Subscription = () => {
                 {value.map((val, index) => {
                   return (
                     <div
+                      key={index}
                       className="icon"
                       style={{
                         display: "flex",

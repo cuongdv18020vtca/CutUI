@@ -7,7 +7,7 @@ const Feature = () => {
   const distpatch = useDispatch();
   useEffect(() => {
     distpatch(getFeature());
-  }, []);
+  }, [distpatch]);
   return (
     <>
       <div className="section" id="SECTION4">
@@ -23,7 +23,7 @@ const Feature = () => {
           <div className="wrap__content_section4">
             {feature.map((val, index) => {
               return (
-                <div className="wrap-detail-section4">
+                <div key={index} className="wrap-detail-section4">
                   <img id="elm_30_imgage" src={val.icon} alt="" />
                   <div className="text-section4">
                     <h4 className="text-style">{val.title}</h4>

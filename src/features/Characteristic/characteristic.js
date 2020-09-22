@@ -9,13 +9,14 @@ const Characteristic = () => {
   );
   useEffect(() => {
     dispatch(getCharacteristic());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
-      <div class="section" id="SECTION2">
-        <div class="draggable Image" id="elm_122">
+      <div className="section" id="SECTION2">
+        <div className="draggable Image" id="elm_122">
           <a
+            href="/#"
             target="_self"
             id="ff4e8fb6-e3a6-4928-834b-cb3bfc084d40"
             className
@@ -28,13 +29,13 @@ const Characteristic = () => {
             />
           </a>
         </div>
-        <div class=" draggable Image" id="elm_11">
-          <div class="p1">
+        <div className=" draggable Image" id="elm_11">
+          <div className="p1">
             {characteristic.map((val, index) => {
               return (
-                <div class="col-4">
+                <div className="col-4" key={index}>
                   <img id="elm_14_image" src={val.icon} alt="1" />
-                  <div class="title">
+                  <div className="title">
                     <h4>
                       <span style={{ lineHeight: "25px" }}>
                         <span style={{ color: "#393d3e" }}>
@@ -43,7 +44,7 @@ const Characteristic = () => {
                       </span>
                     </h4>
                   </div>
-                  <div class="text">
+                  <div className="text">
                     <p style={{ textAlign: "center" }}>
                       <span style={{ fontSize: "14px" }}>
                         <span style={{ lineHeight: "25px" }}>

@@ -9,10 +9,10 @@ const Video = () => {
 
   useEffect(() => {
     dispatch(getVideo());
-  }, []);
+  }, [dispatch]);
   return (
     <>
-      <div class="section" id="SECTION5">
+      <div className="section" id="SECTION5">
         <div className="wrap-content-section5">
           <div className="wrap-detail-section5">
             <div

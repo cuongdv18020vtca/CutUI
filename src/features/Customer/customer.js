@@ -7,10 +7,10 @@ const Customer = () => {
   const customer = useSelector((state) => state.customer.listCustomer);
   useEffect(() => {
     dispatch(getCustomer());
-  }, []);
+  }, [dispatch]);
   return (
     <>
-      <div class="section" id="SECTION7">
+      <div className="section" id="SECTION7">
         <div id="elm_50">
           <h2 id="elm_50_headline">READ OUR TESTIMONIALS</h2>
         </div>
@@ -23,7 +23,7 @@ const Customer = () => {
           <div className="wrap__content_section6">
             {customer.map((val, index) => {
               return (
-                <>
+                <div key={index}>
                   <div className="wrap-detail-section7">
                     <div className="user-image">
                       <img src={val.img} alt="" />
@@ -37,7 +37,7 @@ const Customer = () => {
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
           </div>
