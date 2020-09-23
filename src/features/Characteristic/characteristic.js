@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import "./characteristic.css";
+// import "./characteristic.css";
 import { useSelector, useDispatch } from "react-redux";
 import { getCharacteristic } from "./characteristicSlice";
+import * as styled from "./styledCharacteristic";
 const Characteristic = () => {
   const dispatch = useDispatch();
   const characteristic = useSelector(
@@ -13,8 +14,8 @@ const Characteristic = () => {
 
   return (
     <>
-      <div className="section" id="SECTION2">
-        <div className="draggable Image" id="elm_122">
+      <styled.Background>
+        <styled.Icon>
           <a
             href="/#"
             target="_self"
@@ -28,39 +29,25 @@ const Characteristic = () => {
               alt="1"
             />
           </a>
-        </div>
-        <div className=" draggable Image" id="elm_11">
-          <div className="p1">
+        </styled.Icon>
+        <styled.Wrap_List>
+          <styled.ListCharacteristic>
             {characteristic.map((val, index) => {
               return (
-                <div className="col-4" key={index}>
+                <styled.Column key={index}>
                   <img id="elm_14_image" src={val.icon} alt="1" />
-                  <div className="title">
-                    <h4>
-                      <span style={{ lineHeight: "25px" }}>
-                        <span style={{ color: "#393d3e" }}>
-                          <span style={{ fontSsize: "24px" }}>{val.title}</span>
-                        </span>
-                      </span>
-                    </h4>
-                  </div>
-                  <div className="text">
-                    <p style={{ textAlign: "center" }}>
-                      <span style={{ fontSize: "14px" }}>
-                        <span style={{ lineHeight: "25px" }}>
-                          <span style={{ color: "#8e8386" }}>
-                            {val.content}
-                          </span>
-                        </span>
-                      </span>
-                    </p>
-                  </div>
-                </div>
+                  <styled.Title>
+                    <h4 className="p1">{val.title}</h4>
+                  </styled.Title>
+                  <styled.Text>
+                    <p>{val.content}</p>
+                  </styled.Text>
+                </styled.Column>
               );
             })}
-          </div>
-        </div>
-      </div>
+          </styled.ListCharacteristic>
+        </styled.Wrap_List>
+      </styled.Background>
     </>
   );
 };

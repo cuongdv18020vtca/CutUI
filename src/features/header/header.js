@@ -1,35 +1,32 @@
 import React from "react";
-import "./header.css";
+// import "./header.css";
+import * as styled from "./styledHeader";
 const Header = () => {
   return (
     <>
-      <div id="ElementArea">
-        <div className="draggable Image" id="elm_4">
+      <div>
+        <styled.Wrap_img>
           <img
             id="elm_4_image"
             src="https://1503641826.rsc.cdn77.org/Media/xsdnwcngpiyjfuxgtbyiyuysu_usermedia.png"
             alt="1"
           />
-        </div>
-        <div
-          style={{ width: 200 }}
-          className="draggable section1 Headline"
-          id=" elm_2"
-        >
-          <h1 id="elm_2_headline">MODULANDS</h1>
-        </div>
-        <div className=" draggable section1 Headline" id="elm_3">
-          <h2 id="elm_3_headline">Multi-Purpose Landing Page Template</h2>
-        </div>
-        <div className=" draggable button" id="elm_5">
-          <button className="button_watch">
+        </styled.Wrap_img>
+        <styled.Headline>
+          <styled.Title>MODULANDS</styled.Title>
+        </styled.Headline>
+        <styled.Wrap_Text>
+          <styled.Text>Multi-Purpose Landing Page Template</styled.Text>
+        </styled.Wrap_Text>
+        <div>
+          <styled.Button_Watch>
             <a href="/#">WATCH VIDEO</a>
-          </button>
+          </styled.Button_Watch>
         </div>
-        <div className=" draggable button" id="elm_6">
-          <button className="button_buy">
+        <div>
+          <styled.Button_Buy>
             <a href="/#">BUY TEMPLATE</a>
-          </button>
+          </styled.Button_Buy>
         </div>
       </div>
     </>

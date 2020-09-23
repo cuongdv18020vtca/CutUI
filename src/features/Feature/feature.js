@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import "./feature.css";
 import { useSelector, useDispatch } from "react-redux";
 import { getFeature } from "./featureSlice";
+import * as styled from "./styledFeature";
 const Feature = () => {
   const feature = useSelector((state) => state.feature.listFeature);
   const distpatch = useDispatch();
@@ -10,31 +10,31 @@ const Feature = () => {
   }, [distpatch]);
   return (
     <>
-      <div className="section" id="SECTION4">
-        <div id="elm_33">
-          <h2 id="elm_33_headline">AWESOME FEATURES</h2>
-        </div>
-        <div id="elm_34">
-          <h2 id="elm_34_headline">
+      <styled.Background>
+        <styled.Wrap_Banner>
+          <styled.Banner>AWESOME FEATURES</styled.Banner>
+        </styled.Wrap_Banner>
+        <styled.Wrap_Title>
+          <styled.Title>
             What will you get with our template and Pagewiz
-          </h2>
-        </div>
-        <div className="content_section4">
-          <div className="wrap__content_section4">
+          </styled.Title>
+        </styled.Wrap_Title>
+        <styled.Wrap_Content>
+          <styled.Content>
             {feature.map((val, index) => {
               return (
-                <div key={index} className="wrap-detail-section4">
-                  <img id="elm_30_imgage" src={val.icon} alt="" />
-                  <div className="text-section4">
-                    <h4 className="text-style">{val.title}</h4>
-                    <p>{val.content}</p>
-                  </div>
-                </div>
+                <styled.Wrap_Detail>
+                  <styled.Image src={val.icon} alt="" />
+                  <styled.Text>
+                    <styled.Wrap_Text_Style>{val.title}</styled.Wrap_Text_Style>
+                    <styled.Text_Style>{val.content}</styled.Text_Style>
+                  </styled.Text>
+                </styled.Wrap_Detail>
               );
             })}
-          </div>
-        </div>
-      </div>
+          </styled.Content>
+        </styled.Wrap_Content>
+      </styled.Background>
     </>
   );
 };

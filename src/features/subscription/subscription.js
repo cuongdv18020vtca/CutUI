@@ -1,62 +1,45 @@
 import React, { useEffect } from "react";
 import FormSubscription from "./formSubscription";
 import { useSelector, useDispatch } from "react-redux";
-import "./subscription.css";
+// import "./subscription.css";
 import { getSubscription } from "./subscriptionSlice";
+import * as styled from "./styledSubscription";
 const Subscription = () => {
   const value = useSelector((state) => state.subscription.listSubscription);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSubscription());
   }, [dispatch]);
+
   return (
     <>
-      <div className="section" id="SECTION3">
-        <div className="container">
-          <div className="content">
-            <h2 id="elm_18_headline">GROW YOUR REVENUE</h2>
-            <h2 id="elm_19_headline">
+      <styled.Background>
+        <styled.Container>
+          <styled.Content>
+            <styled.Elm_18_headline>GROW YOUR REVENUE</styled.Elm_18_headline>
+            <styled.Elm_19_headline>
               Maecenas gravida ullacomper nescum seget{" "}
-            </h2>
+            </styled.Elm_19_headline>
             <div className="wrap_content">
-              <div className="wrap_content_detail" style={{ width: "580px" }}>
+              <styled.Wrap_content_detail>
                 {value.map((val, index) => {
                   return (
-                    <div
-                      key={index}
-                      className="icon"
-                      style={{
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        alignItems: "flex-start",
-                      }}
-                    >
-                      <div
-                        className="icon1"
-                        style={{ marginRight: "15px", paddingTop: "14px" }}
-                      >
+                    <styled.Icon>
+                      <styled.Icon1>
                         <img src={val.icon} alt="" />
-                      </div>
+                      </styled.Icon1>
                       <div className="elm_23_text">
-                        <p
-                          style={{
-                            color: "#8e8386",
-                            lineHeight: "25px",
-                            fontSize: "14px",
-                          }}
-                        >
-                          {val.content}
-                        </p>
+                        <styled.Text>{val.content}</styled.Text>
                       </div>
-                    </div>
+                    </styled.Icon>
                   );
                 })}
-              </div>
+              </styled.Wrap_content_detail>
             </div>
-          </div>
+          </styled.Content>
           <FormSubscription />
-        </div>
-      </div>
+        </styled.Container>
+      </styled.Background>
     </>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import "./customer.css";
+
 import { useSelector, useDispatch } from "react-redux";
 import { getCustomer } from "./customerSlice";
+import * as styled from "./styledCustomer";
 const Customer = () => {
   const dispatch = useDispatch();
   const customer = useSelector((state) => state.customer.listCustomer);
@@ -10,39 +11,39 @@ const Customer = () => {
   }, [dispatch]);
   return (
     <>
-      <div className="section" id="SECTION7">
-        <div id="elm_50">
-          <h2 id="elm_50_headline">READ OUR TESTIMONIALS</h2>
-        </div>
-        <div id="elm_50">
-          <h2 id="elm_51_headline">
+      <styled.Background>
+        <styled.Wrap_Banner>
+          <styled.Banner>READ OUR TESTIMONIALS</styled.Banner>
+        </styled.Wrap_Banner>
+        <styled.Wrap_Banner>
+          <styled.Title>
             We appreciate every kind word from our awesome clients
-          </h2>
-        </div>
-        <div className="content_section6">
-          <div className="wrap__content_section6">
+          </styled.Title>
+        </styled.Wrap_Banner>
+        <styled.Content>
+          <styled.Wrap_Content>
             {customer.map((val, index) => {
               return (
-                <div key={index}>
-                  <div className="wrap-detail-section7">
-                    <div className="user-image">
+                <>
+                  <styled.Wrap_Detail_List>
+                    <styled.User_Image>
                       <img src={val.img} alt="" />
-                    </div>
-                    <div className="content7">
-                      <div className="title-section7">{val.name}</div>
-                      <div className="department"> {val.department}</div>
-                      <div className="border7 "></div>
-                      <div className="text-content7">
+                    </styled.User_Image>
+                    <styled.Content_Detail>
+                      <styled.Name>{val.name}</styled.Name>
+                      <styled.Department> {val.department}</styled.Department>
+                      <styled.Borders></styled.Borders>
+                      <styled.Sub_Content>
                         <div>{val.content}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      </styled.Sub_Content>
+                    </styled.Content_Detail>
+                  </styled.Wrap_Detail_List>
+                </>
               );
             })}
-          </div>
-        </div>
-      </div>
+          </styled.Wrap_Content>
+        </styled.Content>
+      </styled.Background>
     </>
   );
 };

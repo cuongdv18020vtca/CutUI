@@ -1,7 +1,6 @@
 import React from "react";
-import "./background.css";
-
+import * as styled from "./styledBackground";
 const Background = () => {
-  return <div className="section" id="SECTION1"></div>;
+  return <styled.Background></styled.Background>;
 };
 export default Background;
